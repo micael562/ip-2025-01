@@ -11,8 +11,8 @@ func main() {
 	}
 
 	animais := []string{
-		"Macaco", "Galo", "Cão", "Porco", "Rato", "Boi",
-		"Tigre", "Coelho", "Dragão", "Serpente", "Cavalo", "Cabra",
+		"Macaco", "Galo", "Cao", "Porco", "Rato", "Boi",
+		"Tigre", "Coelho", "Dragao", "Serpente", "Cavalo", "Cabra",
 	}
 
 	indice := (ano - 2004) % 12
