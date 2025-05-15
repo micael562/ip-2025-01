@@ -1,3 +1,6 @@
+package main
+import "fmt"
+
 func main() {
 	var n int
 
@@ -13,5 +16,6 @@ func main() {
 		for j := 1; j <= n; j++ {
 			fmt.Printf("%d ", i*j)
 		}
+		fmt.Println()
 	}
 }
