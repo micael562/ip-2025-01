@@ -1,15 +1,15 @@
 package main
 
-import ("fmt")
+import "fmt"
 
 func main() {
     var n int
-    fmt.Scan(&n)
+    fmt.Scan(&n) 
 
     soma := 0
     for i := 1; i <= n; i++ {
-        fmt.Printf("%d", i) 
-        soma += i          
+        fmt.Printf("%d ", i) 
+        soma += i           
     }
-    fmt.Printf("%d", soma)
+    fmt.Printf("\n%d\n", soma) 
 }
