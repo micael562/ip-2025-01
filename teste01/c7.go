@@ -1,13 +1,15 @@
 package main
 
-import ("fmt")
+import (
+	"fmt"
+)
 
 func main() {
 	var x float64
 	fmt.Scan(&x)
 
 	s := 0.0
-	pot := 1.0  
+	pot := 1.0 
 	fat := 1.0  
 	sinal := 1.0
 
@@ -18,7 +20,7 @@ func main() {
 		}
 		termo := sinal * pot / fat
 		if i == 0 {
-			termo = x 
+			termo = x
 		}
 		s += termo
 		sinal *= -1
