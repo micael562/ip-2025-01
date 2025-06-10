@@ -31,7 +31,10 @@ func main() {
 		fmt.Printf("Aluno %d: %s\n", i, situacao)
 	}
 
+	mediaClasse := somaMedias / float64(N)
+
 	fmt.Printf("\nTotal Aprovados: %d\n", aprovados)
 	fmt.Printf("Total Exame: %d\n", exame)
 	fmt.Printf("Total Reprovados: %d\n", reprovados)
+	fmt.Printf("Media da classe: %.1f\n", mediaClasse)
 }
