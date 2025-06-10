@@ -16,7 +16,7 @@ func main() {
 	precoMax := 0.0
 	ingressosMax := 0
 
-	fmt.Printf("Preco    Ingressos_Vendidos   Lucro\n")
+	fmt.Printf("Preco    Ingressos Vendidos   Lucro\n")
 
 	iterations := 0
 	for P := P_inicial; P >= P_min-1e-9; P -= DeltaP {
