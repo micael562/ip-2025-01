@@ -1,27 +1,28 @@
 package main
 
-import (
-	"fmt"
-	"math"
-)
+import ("fmt")
 
 func main() {
 	var x float64
 	fmt.Scan(&x)
 
-	var s float64 = 0.0
-	var sinal float64 = 1.0
-	var fatorial float64 = 1.0
-	var potencia float64 = 1.0
+	s := 0.0
+	pot := 1.0  
+	fat := 1.0  
+	sinal := 1.0
 
-	for i := 1; i <= 20; i++ {
-		potencia *= x
-		fatorial *= float64(i)
+	for i := 0; i < 20; i++ {
+		if i > 0 {
+			pot *= x
+			fat *= float64(i)
+		}
+		termo := sinal * pot / fat
+		if i == 0 {
+			termo = x 
+		}
+		s += termo
 		sinal *= -1
-		s += sinal * potencia / fatorial
 	}
-
-	s += x
 
 	fmt.Printf("%.5f\n", s)
 }
