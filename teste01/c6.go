@@ -35,5 +35,5 @@ func main() {
 	fmt.Printf("\nTotal Aprovados: %d\n", totalAprovados)
 	fmt.Printf("Total Exame: %d\n", totalExame)
 	fmt.Printf("Total Reprovados: %d\n", totalReprovados)
-	fmt.Printf("Media da classe: %.1f\n", mediaClasse)
+	fmt.Printf("Media da classe: %.1f", mediaClasse)
 }
