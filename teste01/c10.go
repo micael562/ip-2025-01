@@ -12,15 +12,16 @@ func main() {
 
 	fmt.Scan(&P_inicial, &Q_inicial, &D, &DeltaP, &DeltaQ, &P_min)
 
-	maxLucro := 0.0
+	maxLucro := -1.0
 	precoMax := 0.0
 	ingressosMax := 0
 
-	fmt.Println("Preco    Ingressos_Vendidos   Lucro")
+	fmt.Printf("Preco    Ingressos_Vendidos   Lucro\n")
 
-	for P := P_inicial; P >= P_min; P -= DeltaP {
-
-		Q := Q_inicial + DeltaQ*int((P_inicial-P)/DeltaP)
+	iterations := 0
+	for P := P_inicial; P >= P_min-1e-9; P -= DeltaP {
+		Q := Q_inicial + DeltaQ*iterations
+		iterations++
 
 		lucro := (P * float64(Q)) - D
 
@@ -33,6 +34,6 @@ func main() {
 		}
 	}
 
-	fmt.Printf("\nLucro maximo: %.2f\n", maxLucro)
+	fmt.Printf("Lucro maximo: %.2f\n", maxLucro)
 	fmt.Printf("Na faixa de preco: %.2f com %d ingressos.\n", precoMax, ingressosMax)
 }
