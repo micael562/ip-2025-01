@@ -2,24 +2,28 @@ package main
 
 import (
 	"fmt"
+	"math"
 )
 
 func main() {
-	var x float64
-	fmt.Scan(&x)
+	var X float64
+	fmt.Scan(&X)
 
-	s := x           
-	potencia := x     
-	fatorial := 1.0   
-	sinal := -1.0     
+	S := 0.0
+	factorial := 1.0 
 
-	for i := 1; i < 20; i++ {
-		fatorial *= float64(i)
-		termo := sinal * potencia / fatorial
-		s += termo
-		potencia *= x     
-		sinal *= -1       
+	for n := 0; n < 20; n++ {
+		if n > 0 {
+			factorial *= float64(n)
+		}
+		
+		term := math.Pow(X, float64(n)) / factorial
+		if n%2 == 0 {
+			S += term
+		} else {
+			S -= term
+		}
 	}
 
-	fmt.Printf("%f", s)
+	fmt.Println(S)
 }
