@@ -5,21 +5,27 @@ import (
 )
 
 func main() {
-	var x float64
-	fmt.Scan(&x)
+	var X float64
+	fmt.Scan(&X) 
 
-	s := x            
-	potencia := x    
-	fatorial := 1.0  
-	sinal := -1.0    
+	S := 0.0
+	fat := 1.0  
+	sinal := 1.0 
 
-	for i := 1; i < 20; i++ {
-		fatorial *= float64(i)
-		termo := sinal * potencia / fatorial
-		s += termo
-		potencia *= x     
-		sinal *= -1    
+	for n := 0; n < 20; n++ {
+		xn := 1.0
+		for i := 0; i < n; i++ {
+			xn *= X
+		}
+
+		termo := sinal * xn / fat
+		S += termo
+
+		sinal *= -1
+		if n > 0 {
+			fat *= float64(n + 1)
+		}
 	}
 
-	fmt.Printf("%.5f\n", s)
+	fmt.Printf("%f\n", S) 
 }
