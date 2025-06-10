@@ -8,8 +8,13 @@ func main() {
 
     soma := 0
     for i := 1; i <= n; i++ {
-        fmt.Printf("%d", i) 
-        soma += i           
+        if i == n {
+            fmt.Print(i) 
+        } else {
+            fmt.Print(i, " ") 
+        }
+        soma += i 
     }
-    fmt.Printf("\n%d\n", soma) 
+    fmt.Println() 
+    fmt.Println(soma) 
 }
