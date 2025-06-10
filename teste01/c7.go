@@ -1,8 +1,9 @@
 package main
 
 import (
-  "fmt"
-	"math")
+	"fmt"
+	"math"
+)
 
 func main() {
 	var X float64
@@ -17,7 +18,7 @@ func main() {
 		sinal *= -1 
 	}
 
-	fmt.Printf("%.4f\n", S) 
+	fmt.Printf("%.5f\n", S)
 }
 
 func factorial(n float64) float64 {
