@@ -1,33 +1,31 @@
 package main
 
-import (
-	"fmt"
-	"math"
-)
+import ("fmt")
 
 func main() {
 	var X float64
-	fmt.Scan(&X) 
+	fmt.Scan(&X)
 
 	S := 0.0
-	sinal := 1.0 
+	fat := 1.0 
+	sinal := 1.0
 
 	for n := 0; n < 20; n++ {
-		termo := math.Pow(X, float64(n)) / factorial(float64(n))
-		S += sinal * termo
+		if n > 0 {
+			fat *= float64(n)
+		}
+		termo := sinal * pow(X, float64(n)) / fat
+		S += termo
 		sinal *= -1 
 	}
 
 	fmt.Printf("%.5f\n", S)
 }
 
-func factorial(n float64) float64 {
-	if n == 0 {
-		return 1
-	}
+func pow(x float64, n float64) float64 {
 	result := 1.0
-	for i := 1.0; i <= n; i++ {
-		result *= i
+	for i := 0; i < int(n); i++ {
+		result *= x
 	}
 	return result
 }
