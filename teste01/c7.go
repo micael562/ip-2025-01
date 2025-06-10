@@ -9,20 +9,19 @@ func main() {
 	fmt.Scan(&x)
 
 	s := 0.0
-	pot := 1.0 
-	fat := 1.0  
-	sinal := 1.0
+	potencia := 1.0  
+	fatorial := 1.0  
+	sinal := 1.0   
 
 	for i := 0; i < 20; i++ {
-		if i > 0 {
-			pot *= x
-			fat *= float64(i)
-		}
-		termo := sinal * pot / fat
 		if i == 0 {
-			termo = x
+			s += x 
+			potencia = x
+		} else {
+			potencia *= x
+			fatorial *= float64(i)
+			s += sinal * potencia / fatorial
 		}
-		s += termo
 		sinal *= -1
 	}
 
